@@ -7,5 +7,8 @@ class Cell:
         self.living_neighbours = 0
 
     def will_i_live(self):
-        if self.living_neighbours < 2 or self.living_neighbours > 3:
+        if (self.living_neighbours < 2 or self.living_neighbours > 3) and self.alive:
             return False
+        elif (2 <= self.living_neighbours <= 3) and self.alive:
+            return True
+
